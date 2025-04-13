@@ -6,7 +6,7 @@ function ProjectList() {
   const [search, setSearch] = useState('');
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/projects')
+    axios.get('https://project-management-website-rr6e.onrender.com/api/projects')
       .then(res => setProjects(res.data))
       .catch(err => console.error(err));
   }, []);
