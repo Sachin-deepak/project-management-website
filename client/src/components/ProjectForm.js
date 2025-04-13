@@ -20,7 +20,7 @@ function ProjectForm() {
     const techArray = formData.technologies.split(',').map(t => t.trim());
 
     try {
-      const response = await axios.post('http://localhost:5000/api/projects', {
+      const response = await axios.post('https://project-management-website-rr6e.onrender.com/api/projects', {
         ...formData,
         technologies: techArray
       });
