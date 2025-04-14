@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const projectRoutes = require('./routes/projects');
+const studentRoutes = require('./routes/students');
+
 require('dotenv').config();
 
 const app = express();
@@ -14,6 +16,8 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api/projects', projectRoutes);
+
+app.use('/api/students', studentRoutes);
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log('MongoDB connected ✅'))
